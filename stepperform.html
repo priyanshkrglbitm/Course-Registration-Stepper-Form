@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stepper Form</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Stepper Course Registration Form</h2>
+
+        <div class="step-indicators">
+            <span class="step-indicator" id="indicator-0">Step 1</span>
+            <span class="step-indicator" id="indicator-1">Step 2</span>
+            <span class="step-indicator" id="indicator-2">Step 3</span>
+        </div>
+
+        <form id="stepperForm">
+            <div class="step">
+                <h3>Step 1: Personal Information</h3>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="step">
+                <h3>Step 2: Course Details</h3>
+                <label for="courseName">Course Name:</label>
+                <input type="text" id="courseName" name="courseName" required>
+                <label for="branchName">Branch Name:</label>
+                <input type="text" id="branchName" name="branchName" required>
+                <label for="batchYear">Batch Year:</label>
+                <input type="number" id="batchYear" name="batchYear" required>
+            </div>
+            <div class="step">
+                <h3>Step 3: Payment Details</h3>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required>
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="month" id="expiryDate" name="expiryDate" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+            </div>
+            <div class="navigation-buttons">
+                <button type="button" id="prevBtn" onclick="prevStep()">Previous</button>
+                <button type="button" id="nextBtn" onclick="nextStep()">Next</button>
+                <button type="submit" id="submitBtn">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
+
